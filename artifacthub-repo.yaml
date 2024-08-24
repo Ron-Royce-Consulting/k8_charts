@@ -9,7 +9,6 @@
 # when the hash of the last commit in the branch you set up changes. This does
 # NOT apply to ownership claim operations, which are processed immediately.
 #
-repositoryID: royce-helm-charts
 owners: # (optional, used to claim repository ownership)
   - name: rroyce
     email: gihub.ronald.royce@gmail.com
