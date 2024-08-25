@@ -1,4 +1,7 @@
-### eks-istio deployment chart:
+# k8_charts
+
+The following repository contains the k8 charts developed by Ron L. Royce Consulting, Inc.
+
 - Add to repo via submodule, requires repo SSH PUB KEY
 ```
 cd $project_root/helm
