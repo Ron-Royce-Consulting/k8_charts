@@ -2,7 +2,7 @@
 - Add to repo via submodule, requires repo SSH PUB KEY
 ```
 cd $project_root/helm
-git submodule add https://github.com/rroycedev/k8_charts.git chart
+git submodule add https://github.com/roycedev22/k8_charts.git chart
 ```
  
 # Supports AWS Secrets
