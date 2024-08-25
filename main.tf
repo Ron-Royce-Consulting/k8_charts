@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= 0.13.1"
+  required_version = ">= 1.9.5"
 }
 
 provider "kubernetes" {
@@ -12,20 +12,10 @@ provider "helm" {
   }
 }
 
-resource "kubernetes_namespace" "app" {
-  metadata {
-    name = var.app_namespace
-
-    annotations = {
-      istio-injection : "enabled"
-    }
-  }
-}
-
 resource "helm_release" "app" {
   name = var.app_name
 
-  namespace = kubernetes_namespace.app.metadata.0.name
+  namespace = var.app_namespace
 
   cleanup_on_fail = true
   replace         = true
@@ -36,4 +26,5 @@ resource "helm_release" "app" {
   values = [
       "${file("values.yaml")}",
     ]
-}%  
+}
+
