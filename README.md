@@ -8,7 +8,7 @@ cd $project_root/helm
 git submodule add https://github.com/roycedev22/k8_charts.git chart
 ```
 
-# Manual upgrade (depcreated, use pipeline)
+- Manually install/update kubernetes
 ```
 helm upgrade --install <appname> ./charts/app-deploy-template -f values.yaml -n <namespace>
 ```
